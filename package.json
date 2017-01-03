@@ -1,15 +1,26 @@
 {
-    "name": "haus",
-    "version": "1.0.0",
-    "description": "Your house or house's management",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "Michael Bell",
-    "license": "ISC",
-    "dependencies": {
-        "live-server": "^1.1.0",
-        "bulma": "^0.2.3"
+  "name": "haus",
+  "version": "1.0.0",
+  "description": "Your house or house's management",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "production": "jspm bundle-sfx lib/app --minify"
+  },
+  "author": "Michael Bell",
+  "license": "ISC",
+  "dependencies": {
+    "bulma": "^0.2.3",
+    "jspm": "~0.16.48",
+    "live-server": "^1.1.0",
+    "webcomponents.js": "~0.7.23"
+  },
+  "jspm": {
+    "dependencies": {},
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
     }
+  }
 }

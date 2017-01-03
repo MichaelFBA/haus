@@ -42,6 +42,17 @@
     <!-- PWA Application Setup -->
     <script src="scripts/main.js" async></script>
 
+    <!-- System JS Module Loader -->
+    <!-- Production -->
+    <!-- <script src="build.js" async></script> -->
+
+    <!-- Development -->
+    <script src="jspm_packages/system.js"></script>
+    <script src="config.js"></script>
+    <script>
+        System.import('lib/app.js');
+    </script>
+
 </body>
 
 </html>
