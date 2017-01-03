@@ -23,7 +23,7 @@
       "sizes": "256x256",
       "type": "image/png"
     }],
-  "start_url": "/",
+  "start_url": "https://michaelfba.github.io/haus/",
   "display": "standalone",
   "background_color": "#222",
   "theme_color": "#222",
