@@ -10,17 +10,22 @@
   "author": "Michael Bell",
   "license": "ISC",
   "dependencies": {
+    "app-router": "git+https://github.com/erikringsmuth/app-router.git",
     "bulma": "^0.2.3",
     "jspm": "~0.16.48",
     "live-server": "^1.1.0",
+    "pushstate-anchor": "~0.4.4",
     "webcomponents.js": "~0.7.23"
   },
   "jspm": {
-    "dependencies": {},
+    "dependencies": {
+      "pouchdb": "github:pouchdb/pouchdb@^6.1.0"
+    },
     "devDependencies": {
       "babel": "npm:babel-core@^5.8.24",
       "babel-runtime": "npm:babel-runtime@^5.8.24",
-      "core-js": "npm:core-js@^1.1.4"
+      "core-js": "npm:core-js@^1.1.4",
+      "sass": "github:mobilexag/plugin-sass@^0.5.1"
     }
   }
 }
