@@ -15,7 +15,7 @@
 var dataCacheName = 'haus-v1';
 var cacheName = 'hausPWA';
 var filesToCache = [
-  './index.html',
+  '../index.html',
   'main.js',
 ];
 
