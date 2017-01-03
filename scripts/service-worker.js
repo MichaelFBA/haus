@@ -16,8 +16,8 @@ var dataCacheName = 'haus-v1';
 var cacheName = 'hausPWA';
 var filesToCache = [
   '/',
-  '/index.html',
-  '/scripts/main.js',
+  'index.html',
+  'scripts/main.js',
 ];
 
 self.addEventListener('install', function(e) {
