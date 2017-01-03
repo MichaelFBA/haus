@@ -42,12 +42,20 @@
 </head>
 
 <body>
-    <nav>
-        <a is="pushstate-anchor" href="/">Haus</a>
-        <a is="pushstate-anchor" href="/manifesto">Manifesto</a>
-        <a is="pushstate-anchor" href="/pricing">Pricing</a>
-        <a is="pushstate-anchor" href="/properties">Begin</a>
-    </nav>
+    <nav class="columns">
+        <div class="column is-three-quarters">
+            <a is="pushstate-anchor" href="/">Haus</a>
+        </div>
+        <div class="column">
+            <a is="pushstate-anchor" href="/manifesto">Manifesto</a>
+        </div>
+        <div class="column">
+            <a is="pushstate-anchor" href="/pricing">Pricing</a>
+        </div>
+        <div class="column">
+            <a is="pushstate-anchor" href="/properties">Begin</a>
+        </div>
+     </nav>
     <main>
         main page
         <app-router>
