@@ -4,8 +4,9 @@
   "description": "Your house or house's management",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "production": "jspm bundle-sfx lib/app --minify"
+    "dev": "concurrently -p \"[{name}]\" -n \"HTTP,JS,CSS\" -c \"bgBlue.bold,bgMagenta.bold,bgGreen.bold\" \"live-server\" \"npm run watch-files\"",
+    "bundle": "jspm bundle-sfx lib/app dist/main.js",
+    "watch-files": "nodemon -e js --ignore dist/ -x \"npm run bundle\""
   },
   "author": "Michael Bell",
   "license": "ISC",
@@ -15,7 +16,9 @@
     "jspm": "~0.16.48",
     "live-server": "^1.1.0",
     "pushstate-anchor": "~0.4.4",
-    "webcomponents.js": "~0.7.23"
+    "webcomponents.js": "~0.7.23",
+    "nodemon": "^1.11.0",
+    "concurrently": "~3.1.0"
   },
   "jspm": {
     "dependencies": {
