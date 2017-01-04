@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "production": "jspm bundle-sfx lib/app --minify"
+    "production": "jspm bundle-sfx lib/app"
   },
   "author": "Michael Bell",
   "license": "ISC",

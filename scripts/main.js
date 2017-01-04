@@ -11,7 +11,7 @@
         var script = document.createElement('script');
         script.async = true;
         script.src = './node_modules/webcomponents.js/webcomponents-lite.min.js';
-        script.onload = finishLazyLoadingImports;
+        //script.onload = finishLazyLoadingImports;
         document.head.appendChild(script);
     }
 

@@ -23,55 +23,40 @@
             font-family: 'Roboto', sans-serif;
             background-color: #222222;
             color: #ffffff;
+            font-size:16px;
         }
         h1,h2,h3,h4,h5{
             font-family: 'Montserrat', sans-serif;
         }
-        nav{
-            width: 100%;
-            height: 56px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            padding: 0 16px;
-            box-sizing: border-box;
-        }
         a, a:visited,a:hover,a:focus{ color: #ffffff; text-decoration: none;}
+
+        .color-1{color: #ff5252}
+        .color-1-bg{background-color: #ff5252}
+        nav{
+            border-bottom: 1px solid grey
+
+        }
+        nav a{
+            margin-top: 10px;
+            display: inline-flex;
+            padding:10px;
+        }
     </style>
 
 </head>
 
 <body>
-    <nav class="columns">
-        <div class="column is-4 is-offset-1">
-            <a is="pushstate-anchor" href="/">Haus</a>
-        </div>
-        <div class="column is-6">
-            <a is="pushstate-anchor" href="/manifesto">Manifesto</a>
-            <a is="pushstate-anchor" href="/pricing">Pricing</a>
-            <a is="pushstate-anchor" href="/properties">Begin</a>
-        </div>
-        <div class="column">
-
-        </div>
-     </nav>
     <main>
-        main page
         <app-router>
-            <!-- matches an exact path -->
-            <app-route path="/" import="public/pages/home.html" template></app-route>
-
-            <!-- matches using a wildcard -->
-            <app-route path="/account" import="public/pages/account.html" template></app-route>
-
-            <!-- matches using a path variable -->
-            <app-route path="/event/:id" import="public/pages/event.html" template></app-route>
-
-            <!-- matches everything else -->
-            <app-route path="*" import="public/pages/not-found-page.html" template></app-route>
+            <app-route path="/" import="components/home/home.html" template></app-route>
+            <app-route path="/properties" import="components/properties/properties.html" template></app-route>
+            <app-route path="/manifesto" import="components/manifesto/manifesto.html" template></app-route>
+            <app-route path="/pricing" import="components/pricing/pricing.html" template></app-route>
+            <app-route path="/properties/edit/:id" import="pages/event.html" template></app-route>
+            <app-route path="/properties/insights/:id" import="pages/event.html" template></app-route>
+            <app-route path="*" import="pages/not-found-page.html" template></app-route>
         </app-router>
     </main>
-    <footer></footer>
 
     <!-- PWA Application Setup -->
     <script src="scripts/main.js" async></script>

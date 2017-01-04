@@ -15,7 +15,7 @@ System.config({
 
   meta: {
     '*.css': { loader: 'css' }
-},
+  },
 
   map: {
     "babel": "npm:babel-core@5.8.38",
