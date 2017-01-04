@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "concurrently -p \"[{name}]\" -n \"HTTP,JS,CSS\" -c \"bgBlue.bold,bgMagenta.bold,bgGreen.bold\" \"live-server\" \"npm run watch-files\"",
+    "prod": "webpack --config webpack.config.js -p",
     "bundle": "webpack --config webpack.config.js",
     "watch-files": "nodemon -e js --ignore dist/ -x \"npm run bundle\""
   },

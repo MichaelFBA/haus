@@ -1,6 +1,18 @@
 webpackJsonp([1,2],{
 
-/***/ 0:
+/***/ 105:
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _polyfills = __webpack_require__(28);
+
+(0, _polyfills.ConditionallyLoadPolyfills)();
+
+/***/ },
+
+/***/ 28:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29,18 +41,6 @@ function ConditionallyLoadPolyfills() {
     }
 }
 
-/***/ },
-
-/***/ 5:
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _polyfills = __webpack_require__(0);
-
-(0, _polyfills.ConditionallyLoadPolyfills)();
-
 /***/ }
 
-},[5]);
+},[105]);

@@ -13,11 +13,10 @@ html, body{
 </style>
 <body>
 <script src="https://d3js.org/d3.v3.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
 <script>
 
-var width = $('body').width(),
-    height = $('body').height(),
+var width = window.innerWidth,
+    height = window.innerHeight,
     padding = 5, // separation between same-color circles
     clusterPadding = 1, // separation between different-color circles
     maxRadius = 42;

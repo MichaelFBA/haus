@@ -19,6 +19,9 @@ module.exports = {
             filename: 'commons.js',
             minChunks: 2,
         }),
+        new webpack.ProvidePlugin({
+          'd3': 'd3',
+        })
     ],
     //Dev Server
     devServer: {
