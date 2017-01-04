@@ -8,6 +8,10 @@
 circle{
     fill: #FF5252;
     opacity:1;
+
+    &:first-child{
+        fill: #A13030;
+    }
 }
 
 .home-reasons .column{

@@ -1696,20 +1696,21 @@ function InteractiveBg(element) {
     var height = document.getElementById(element).clientHeight;
 
     var svg = _D3Custom2.default.select('#' + element).append("svg").attr("width", width).attr("height", height).attr("style", "position:absolute");
-    var noOfBalls = 20;
+    var noOfBalls = 25;
     var nodeData = [];
+    nodeData.push({ 'x': width / 2, 'y': height / 2, 'r': 70 });
 
-    for (var i = 0; i < noOfBalls; i++) {
+    for (var i = 1; i < noOfBalls; i++) {
         nodeData.push({
-            'x': randomNumber(0, width),
+            'x': randomNumber(width / 3, width),
             'y': randomNumber(0, height),
             'r': randomNumber(10, 70)
         });
     }
 
-    var attractForce = _D3Custom2.default.forceManyBody().strength(580).distanceMax(400).distanceMin(1);
+    var attractForce = _D3Custom2.default.forceManyBody().strength(400).distanceMax(1000).distanceMin(1);
     var collisionForce = _D3Custom2.default.forceCollide().radius(function (d) {
-        return d.r + 0.5;
+        return d.r + 2;
     }).strength(1).iterations(100);
 
     var simulation = _D3Custom2.default.forceSimulation(nodeData).alphaDecay(0.01).force("attractForce", attractForce).force("collisionForce", collisionForce);
@@ -5051,7 +5052,7 @@ exports = module.exports = __webpack_require__(2)();
 
 
 // module
-exports.push([module.i, ".hero {\n  background-color: transparent; }\n  .hero .hero-body {\n    z-index: 2; }\n\ncircle {\n  fill: #FF5252;\n  opacity: 1; }\n\n.home-reasons .column {\n  padding: 80px 0px; }\n", ""]);
+exports.push([module.i, ".hero {\n  background-color: transparent; }\n  .hero .hero-body {\n    z-index: 2; }\n\ncircle {\n  fill: #FF5252;\n  opacity: 1; }\n  circle:first-child {\n    fill: #A13030; }\n\n.home-reasons .column {\n  padding: 80px 0px; }\n", ""]);
 
 // exports
 
@@ -5065,7 +5066,7 @@ exports = module.exports = __webpack_require__(2)();
 
 
 // module
-exports.push([module.i, ".bbt {\n  border-bottom: 1px solid #979797; }\n\n.btt {\n  border-top: 1px solid #979797; }\n", ""]);
+exports.push([module.i, ".bbt {\n  border-bottom: 1px solid #979797; }\n\n.btt {\n  border-top: 1px solid #979797; }\n\n.text-center {\n  text-align: center; }\n", ""]);
 
 // exports
 
