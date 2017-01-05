@@ -1694,17 +1694,19 @@ function InteractiveBg(element) {
 
     var width = document.getElementById(element).clientWidth;
     var height = document.getElementById(element).clientHeight;
-
+    var isMobile = window.innerWidth <= 415;
     var svg = _D3Custom2.default.select('#' + element).append("svg").attr("width", width).attr("height", height).attr("style", "position:absolute");
-    var noOfBalls = 25;
+    var noOfBalls = isMobile ? 10 : 25;
+    var sizeOfLargeCircles = isMobile ? 40 : 70;
+
     var nodeData = [];
-    nodeData.push({ 'x': width / 2, 'y': height / 2, 'r': 70 });
+    nodeData.push({ 'x': width / 2, 'y': height / 2, 'r': sizeOfLargeCircles });
 
     for (var i = 1; i < noOfBalls; i++) {
         nodeData.push({
             'x': randomNumber(width / 3, width),
             'y': randomNumber(0, height),
-            'r': randomNumber(10, 70)
+            'r': randomNumber(10, sizeOfLargeCircles)
         });
     }
 
@@ -5078,7 +5080,7 @@ exports = module.exports = __webpack_require__(1)();
 
 
 // module
-exports.push([module.i, ".hero {\n  background-color: transparent; }\n  .hero .hero-body {\n    z-index: 1; }\n\ncircle {\n  fill: #FF5252;\n  opacity: 1; }\n  circle:first-child {\n    fill: #A13030; }\n\n.home-reasons .column {\n  padding: 80px 0px; }\n\nfooter ul {\n  list-style: none;\n  margin: 0px;\n  padding: 0px; }\n  footer ul li {\n    margin-bottom: 1em; }\n", ""]);
+exports.push([module.i, ".hero {\n  background-color: transparent; }\n  .hero .hero-body {\n    z-index: 1; }\n\ncircle {\n  fill: #FF5252;\n  opacity: 1; }\n  circle:first-child {\n    fill: #A13030; }\n\n.home-reasons {\n  min-height: 450px; }\n\nfooter ul {\n  list-style: none;\n  margin: 0px;\n  padding: 0px; }\n  footer ul li {\n    margin-bottom: 1em; }\n", ""]);
 
 // exports
 
