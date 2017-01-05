@@ -1,24 +1,36 @@
 <template>
-    <nav class="columns">
-        <div class="column is-10 is-offset-1">
-            <div class="columns">
-                <div class="column is-narrow">
-                    <a is="pushstate-anchor" href="/"><img src="dist/images/haus-logo.svg" alt="Haus"/></a>
-                </div>
-                <div class="column">
-                    <a is="pushstate-anchor" href="/manifesto">Manifesto</a>
-                    <a is="pushstate-anchor" href="/pricing">Pricing</a>
-                    <a is="pushstate-anchor" class="btn color-1-bg" href="/properties">Begin</a>
-                </div>
-            </div>
+    <nav class="nav">
+        <div class="nav-left">
+            <a class="nav-item" is="pushstate-anchor" href="/">
+                <img src="dist/images/haus-logo.svg" alt="Haus" />
+            </a>
+        </div>
+
+        <!-- This "nav-toggle" hamburger menu is only visible on mobile -->
+        <!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
+        <span class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </span>
+
+        <!-- This "nav-menu" is hidden on mobile -->
+        <!-- Add the modifier "is-active" to display it on mobile -->
+        <div class="nav-right nav-menu">
+            <a class="nav-item" is="pushstate-anchor" href="/manifesto">Manifesto</a>
+            <a class="nav-item" is="pushstate-anchor" href="/pricing">Pricing</a>
+            <span class="nav-item">
+                <a  class="button" is="pushstate-anchor" href="/properties">Begin</a>
+            </span>
         </div>
     </nav>
+
     <section id="hero-interactive" class="hero is-medium bbt">
         <div class="hero-body">
             <div class="columns">
                 <div class="column is-6 is-offset-1">
                     <h1>We believe in an offline first, privacy focused solution for managing your private property.</h1>
-                    <a is="pushstate-anchor" class="btn color-1-bg" href="/properties">Try now for free</a>
+                    <a is="pushstate-anchor" class="button" href="/properties">Try now for free</a>
                 </div>
             </div>
         </div>
@@ -26,45 +38,56 @@
 
     <section class="home-reasons columns bbt">
         <div class="column is-3 is-offset-1">
-            <h4 class="btt">What is Offline first?</h4>
-            <p>We live in a disconnected and battery powered world, but our technology and best practices are a leftover from the always connected and steadily powered past.</p>
-            <p>  We make sure your app is always available even if your on the subway or travelling abroad without internet access.</p>
+            <h4 class="btt pt1">What is Offline first?</h4>
+            <p>We live in a disconnected and battery powered world, but our technology and best practices are a leftover from the always connected and steadily powered past.</p>
+            <p>
+
+                We make sure your app is always available even if your on the subway or travelling abroad without internet access.</p>
             <a is="pushstate-anchor" class="color-1" href="/properties">Read more about it here</a>
         </div>
         <div class="column is-5 is-offset-1">
-            <h4 class="btt">We are Privacy Focused</h4>
+            <h4 class="btt pt1">We are Privacy Focused</h4>
             <blockquote class="color-1">If you are not paying for it, you're not the customer, you're the product being sold</blockquote>
-            <p>We often sacrifice some part of our privacy (think e-mail, digital photography, private messaging) to companies that provide a service. But behind the scenes your valuable data can be sold for advertisement purposes or even used for surveillance via Governments.
-            <p>We think there is a better, safer and secure way to start making privacy a central focus for applications moving forward.  It starts with you and your phone.</p>
+            <p>We often sacrifice some part of our privacy (think e-mail, digital photography, private messaging) to companies that provide a service. But behind the scenes your valuable data can be sold for advertisement purposes or even used for surveillance
+                via Governments.
+                <p>We think there is a better, safer and secure way to start making privacy a central focus for applications moving forward. It starts with you and your phone.</p>
         </div>
     </section>
 
     <section class="home-app columns bbt">
-        <div class="column is-5 text-center">
-            <img src="dist/images/app-preview.png" alt="Haus App"/>
+        <div class="column is-5 text-center pan brt">
+            <img class="pt2" src="dist/images/app-preview.png" alt="Haus App" />
         </div>
-        <div class="column is-4 is-offset-1">
-            <h4 class="btt">Safe, secure, local</h4>
+        <div class="column is-4 is-offset-1 vertical">
+            <h4 class="btt pt1">Safe, secure, local</h4>
             <p>You don’t need to download an app / sign up or transfer any information over the internet. Be safe. </p>
-            <p>  Simply visit this site with your mobile phone, you will be prompted to add it to your homescreen. That’s it.  </p>
-            <p>All of your data will be stored locally on your phone so only you have access. You can even access it when you are offline.  If you want to access your data across multiple devices or save encrypted backups.  </p>
+            <p>
+
+                Simply visit this site with your mobile phone, you will be prompted to add it to your homescreen. That’s it.
+
+            </p>
+            <p>All of your data will be stored locally on your phone so only you have access. You can even access it when you are offline. If you want to access your data across multiple devices or save encrypted backups.
+
+            </p>
         </div>
     </section>
 
     <footer class="columns">
-        <div class="column is-2 is-offset-1">
-            <h4 class="btt">Pages</h4>
-            <a is="pushstate-anchor" href="/manifesto">Manifesto</a>
-            <a is="pushstate-anchor" href="/pricing">Pricing</a>
-            <a is="pushstate-anchor" href="/properties">Contact</a>
-            <a is="pushstate-anchor" href="/properties">Privacy</a>
+        <div class="column is-2 is-offset-1 ">
+            <h4 class="btt pt1">Pages</h4>
+            <ul>
+                <li><a is="pushstate-anchor" href="/manifesto">Manifesto</a></li>
+                <li><a is="pushstate-anchor" href="/pricing">Pricing</a></li>
+                <li><a is="pushstate-anchor" href="/properties">Contact</a></li>
+                <li><a is="pushstate-anchor" href="/properties">Privacy</a></li>
+            </ul>
         </div>
         <div class="column is-2">
-            <h4 class="btt">Made with love in Berlin</h4>
+            <h4 class="btt pt1">Made with love in Berlin</h4>
             <p>Copyright 2017</p>
         </div>
         <div class="column is-3 is-offset-4">
-            <img src="dist/images/relax.png" alt="Relax"/>
+            <img src="dist/images/relax.png" alt="Relax" />
         </div>
     </footer>
 </template>

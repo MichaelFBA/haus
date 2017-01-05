@@ -1,3 +1,28 @@
+// Borders
 .bbt{ border-bottom: 1px solid #979797;}
 .btt{ border-top: 1px solid #979797;}
+.brt{ border-right: 1px solid #979797;}
+.blt{ border-left: 1px solid #979797;}
+
+// Typographic
 .text-center{text-align: center;}
+.text-right{text-align: center;}
+
+// Spacing
+.pan{padding: 0px !important}
+.pt1{padding-top: 1em;}
+.pb1{padding-bottom: 1em;}
+.pl1{padding-left: 1em;}
+.pr1{padding-right: 1em;}
+.pt2{padding-top: 2em;}
+.pb2{padding-bottom: 2em;}
+.pl2{padding-left: 2em;}
+.pr2{padding-right: 2em;}
+
+//Veritcal
+.vertical{
+    -webkit-flex-direction: column; /* Safari */
+    flex-direction:         column;
+    justify-content: center;
+    display: flex;
+}

@@ -1,6 +1,6 @@
 webpackJsonp([1,2],{
 
-/***/ 105:
+/***/ 107:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29,7 +29,7 @@ function ConditionallyLoadPolyfills() {
     if (!webComponentsSupported) {
         var script = document.createElement('script');
         script.async = true;
-        script.src = './scripts/webcomponents-lite.min.js';
+        script.src = './dist/scripts/webcomponents-lite.min.js';
         document.head.appendChild(script);
     }
 
@@ -43,4 +43,4 @@ function ConditionallyLoadPolyfills() {
 
 /***/ }
 
-},[105]);
+},[107]);
