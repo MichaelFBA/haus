@@ -1,6 +1,8 @@
 <template>
-    <nav class="nav">
-        <div class="nav-center">
+    <nav class="columns bbt">
+        <div class="column is-quarter">
+        </div>
+        <div class="column is-quarter text-center">
             <a class="nav-item" is="pushstate-anchor" href="/">
                 <img src="dist/images/haus-logo.svg" alt="Haus" />
             </a>
@@ -14,9 +16,7 @@
             <span></span>
         </span>
 
-        <!-- This "nav-menu" is hidden on mobile -->
-        <!-- Add the modifier "is-active" to display it on mobile -->
-        <div class="nav-right nav-menu">
+        <div class="column auto is-hidden-mobile">
             <a class="nav-item" is="pushstate-anchor" href="/manifesto">Manifesto</a>
             <a class="nav-item" is="pushstate-anchor" href="/pricing">Pricing</a>
             <span class="nav-item">
