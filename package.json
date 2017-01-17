@@ -4,10 +4,10 @@
   "description": "Your house or house's management",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently -p \"[{name}]\" -n \"HTTP,JS,CSS\" -c \"bgBlue.bold,bgMagenta.bold,bgGreen.bold\" \"live-server\" \"npm run watch-files\"",
-    "prod": "webpack --config webpack.config.js -p",
-    "bundle": "webpack --config webpack.config.js",
-    "watch-files": "nodemon -e js --ignore dist/ -x \"npm run bundle\""
+    "local-server" : "live-server",
+    "watch-files" : "webpack --config webpack.config.js --watch",
+    "dev": "npm run local-server | npm run watch-files",
+    "prod": "webpack --config webpack.config.js -p"
   },
   "author": "Michael Bell",
   "license": "ISC",
@@ -17,13 +17,10 @@
     "babel-loader": "~6.2.10",
     "babel-preset-es2015": "~6.18.0",
     "bulma": "^0.2.3",
-    "concurrently": "~3.1.0",
     "css-loader": "~0.26.1",
     "d3": "~4.4.0",
-    "jspm": "~0.16.48",
     "live-server": "^1.1.0",
     "node-sass": "~4.1.1",
-    "nodemon": "^1.11.0",
     "pouchdb": "~6.1.0",
     "pushstate-anchor": "~0.4.4",
     "sass-loader": "~4.1.1",
