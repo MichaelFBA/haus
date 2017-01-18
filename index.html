@@ -12,8 +12,9 @@
     <link rel="manifest" href="manifest.json">
 
     <!-- Imports -->
-    <link async rel="import" href="dist/components/pushstate-anchor/pushstate-anchor.html">
+    <!-- <link async rel="import" href="dist/components/pushstate-anchor/pushstate-anchor.html">
     <link async rel="import" href="dist/components/app-router/app-router.html">
+    <link async rel="import" href="dist/components/repeat-template/repeat-template.html"> -->
 
     <!-- Basic Styles -->
     <style>
@@ -47,25 +48,6 @@
 
         .color-1{color: #ff5252}
         .color-1-bg{background-color: #ff5252}
-        .nav{
-            border-bottom: 1px solid grey;
-            background-color: #222222 !important;
-        }
-        .nav-menu{
-            background-color: #222222 !important;
-        }
-        .nav-toggle span {
-            background-color: #979797 !important;
-        }
-        .nav-toggle:hover {
-            background-color:#ff5252 !important;
-        }
-        .button{
-            background-color: #ff5252;
-            border: 1px solid #A13030;
-            padding: 10px 30px;
-            color: #ffffff !important;
-        }
         .columns{ margin:0px !important;padding: 0px 30px;}
     </style>
 
@@ -74,19 +56,19 @@
 <body>
     <main>
         <app-router>
-            <app-route path="/" import="dist/components/home-page/home-page.html" template></app-route>
-            <app-route path="/properties" import="dist/components/properties.html" template></app-route>
-            <app-route path="/manifesto" import="dist/components/manifesto.html" template></app-route>
-            <app-route path="/pricing" import="dist/components/pricing.html" template></app-route>
-            <app-route path="/properties/edit/:id" import="dist/properties-edit.html" template></app-route>
-            <app-route path="/properties/insights/:id" import="dist/properties-insights.html" template></app-route>
-            <app-route path="*" import="dist/not-found-page.html" template></app-route>
+            <app-route path="/" import="/lib/components/home-page/home-page.html" template></app-route>
+            <app-route path="/properties" import="/lib/components/properties-page/properties-page.html" template></app-route>
+            <app-route path="/manifesto" import="/lib/components/manifesto.html" template></app-route>
+            <app-route path="/pricing" import="/lib/components/pricing.html" template></app-route>
+            <app-route path="/properties/edit/:id" import="/lib/properties-edit.html" template></app-route>
+            <app-route path="/properties/insights/:id" import="/lib/properties-insights.html" template></app-route>
+            <app-route path="*" import="/lib/not-found-page.html" template></app-route>
         </app-router>
     </main>
 
     <!-- PWA Application Setup & Common Files -->
-    <script src="dist/scripts/commons.js" async></script>
-    <script src="dist/scripts/app.bundle.js" async></script>
+    <script src="/scripts/commons.js" async></script>
+    <script src="/scripts/app.bundle.js" async></script>
 
 </body>
 

@@ -4,12 +4,13 @@ var webpack = require("webpack");
 module.exports = {
     //All entry pages
     entry: {
-        home: "./lib/components/home-page",
-        app: "./lib/app"
+        home: "./lib/pages/home",
+        properties: "./lib/pages/properties",
+        app: "./lib/pages/app"
     },
     //Output Directory and filenames
     output: {
-        path: path.join(__dirname, "dist/scripts"),
+        path: path.join(__dirname, "scripts"),
         filename: "[name].bundle.js",
     },
     //Outputs common imports into one file
@@ -20,16 +21,17 @@ module.exports = {
             minChunks: 2,
         }),
         new webpack.ProvidePlugin({
-          'd3': 'd3',
+            'd3': 'd3',
         })
     ],
-    //Dev Server
-    devServer: {
-        contentBase: path.resolve(__dirname, 'index.html'),
-    },
     module: {
         rules: [{
+            test: /\.html$/, // handles html files. <link rel="import" href="path.html"> and import 'path.html';
+            use: ['wc-loader'],
+            exclude: /(png|jpg|gif|svg)/,
+        }, {
             test: /\.js$/,
+            exclude: /(node_modules|scripts)/,
             use: [{
                 loader: 'babel-loader',
                 options: {
@@ -44,5 +46,9 @@ module.exports = {
                 'sass-loader',
             ]
         }]
+    },
+    //Dev Server
+    devServer: {
+        historyApiFallback: true,
     }
 };

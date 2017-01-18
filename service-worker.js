@@ -16,10 +16,10 @@ var dataCacheName = 'haus-v1';
 var cacheName = 'hausPWA';
 var filesToCache = [
   'index.html',
-  'dist/scripts/commons.js',
-  'dist/scripts/webcomponents-lite.min.js',
-  'dist/scripts/app.bundle.js',
-  'dist/scripts/home.bundle.js',
+  '/scripts/commons.js',
+  '/scripts/webcomponents-lite.min.js',
+  '/scripts/app.bundle.js',
+  '/scripts/home.bundle.js',
 ];
 
 self.addEventListener('install', function(e) {

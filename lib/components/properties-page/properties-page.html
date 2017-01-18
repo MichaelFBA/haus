@@ -1,0 +1,52 @@
+<template>
+    <nav class="columns is-mobile bbt">
+        <div class="column is-one-quarter-mobile">
+        </div>
+        <div class="column is-one-half-mobile text-center">
+            <a class="nav-item" is="pushstate-anchor" href="/">
+                <img src="/images/haus-logo.svg" alt="Haus" />
+            </a>
+        </div>
+
+        <div class="column is-one-quarter-mobile text-right">
+            <span class="nav-toggle is-hidden-tablet">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </div>
+
+        <div class="column auto is-hidden-mobile">
+            <a class="nav-item" is="pushstate-anchor" href="/manifesto">Manifesto</a>
+            <a class="nav-item" is="pushstate-anchor" href="/pricing">Pricing</a>
+            <span class="nav-item">
+                <a  class="button" is="pushstate-anchor" href="/properties">Begin</a>
+            </span>
+        </div>
+    </nav>
+
+    <section class="columns bbt">
+        <div class="column is-11 is-offset-1 vertical">
+            <h3>Let’s begin</h3>
+            <p>Once you have added a property it will appear here. Simple click the + below to add your first property.</p>
+        </div>
+    </section>
+
+    <section class="columns bbt">
+        <div class="column is-11 is-offset-1 vertical">
+            <h4 class="color-1">For your peace of mind</h4>
+            <p class="color-1">We will never transfer any of your private data over the internet, all the information you provide is stored locally on your phone.</p>
+        </div>
+    </section>
+
+    <section class="columns">
+        <div class="column is-12">
+            <div class="block text-center">
+                <button class="button round fixed-bottom-middle" type="button">+</button>
+            </div>
+        </div>
+    </section>
+
+</template>
+
+<script src="../../../scripts/properties.bundle.js" async></script>

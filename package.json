@@ -4,9 +4,7 @@
   "description": "Your house or house's management",
   "main": "index.js",
   "scripts": {
-    "local-server" : "live-server",
-    "watch-files" : "webpack --config webpack.config.js --watch",
-    "dev": "npm run local-server | npm run watch-files",
+    "dev": "webpack-dev-server --inline --hot --port 3000",
     "prod": "webpack --config webpack.config.js -p"
   },
   "author": "Michael Bell",
@@ -19,13 +17,19 @@
     "bulma": "^0.2.3",
     "css-loader": "~0.26.1",
     "d3": "~4.4.0",
+    "event-emitter": "git+https://github.com/Olical/EventEmitter.git",
+    "file-loader": "~0.9.0",
     "live-server": "^1.1.0",
     "node-sass": "~4.1.1",
     "pouchdb": "~6.1.0",
     "pushstate-anchor": "~0.4.4",
+    "repeat-template": "git+https://github.com/MichaelFBA/repeat-template.git",
     "sass-loader": "~4.1.1",
     "style-loader": "~0.13.1",
+    "wc-loader": "~1.0.8",
     "webcomponents.js": "~0.7.23",
-    "webpack": "~2.2.0-rc.3"
+    "webpack": "^2.2.0-rc.1",
+    "webpack-dev-server": "^2.2.0-rc.0",
+    "wolfy87-eventemitter": "~5.1.0"
   }
 }
