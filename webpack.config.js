@@ -1,5 +1,9 @@
-var path = require("path");
-var webpack = require("webpack");
+let path = require("path");
+let webpack = require("webpack");
+let ExtractTextPlugin = require('extract-text-webpack-plugin');
+let WatchIgnorePlugin = require("webpack").WatchIgnorePlugin;
+
+const NODE_ENV = process.env.NODE_ENV || 'development'
 
 module.exports = {
     //All entry pages
@@ -10,7 +14,7 @@ module.exports = {
     },
     //Output Directory and filenames
     output: {
-        path: path.join(__dirname, "scripts"),
+        path: __dirname + "/scripts",
         filename: "[name].bundle.js",
     },
     //Outputs common imports into one file
@@ -22,14 +26,14 @@ module.exports = {
         }),
         new webpack.ProvidePlugin({
             'd3': 'd3',
-        })
+        }),
+        new ExtractTextPlugin('stylesheets/[name].css'),
+        new WatchIgnorePlugin([
+            path.resolve(__dirname, './scripts/'),
+        ]),
     ],
     module: {
         rules: [{
-            test: /\.html$/, // handles html files. <link rel="import" href="path.html"> and import 'path.html';
-            use: ['wc-loader'],
-            exclude: /(png|jpg|gif|svg)/,
-        }, {
             test: /\.js$/,
             exclude: /(node_modules|scripts)/,
             use: [{
@@ -40,15 +44,13 @@ module.exports = {
             }],
         }, {
             test: /\.(sass|scss)$/,
-            use: [
-                'style-loader',
-                'css-loader',
-                'sass-loader',
-            ]
+            loader: ExtractTextPlugin.extract({
+                    fallbackLoader: 'style-loader',
+                    loader: "css-loader!sass-loader",
+            })
+        },{
+            test: /\.html$/,
+            use: ['wc-loader'],
         }]
-    },
-    //Dev Server
-    devServer: {
-        historyApiFallback: true,
     }
 };

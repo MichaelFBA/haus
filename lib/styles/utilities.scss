@@ -1,8 +1,9 @@
 // Borders
-.bbt{ border-bottom: 1px solid #979797;}
-.btt{ border-top: 1px solid #979797;}
-.brt{ border-right: 1px solid #979797;}
-.blt{ border-left: 1px solid #979797;}
+.bbt{ border-bottom: 1px solid #444444;}
+.btt{ border-top: 1px solid #444444;}
+.brt{ border-right: 1px solid #444444;}
+.blt{ border-left: 1px solid #444444;}
+
 
 // Typographic
 .text-center{text-align: center;}
@@ -11,6 +12,8 @@
 //Positioning
 .relative{position: relative;}
 .absolute{position: absolute;}
+.front{z-index: 2}
+.back{z-index: 1;}
 
 // Spacing
 .pan{padding: 0px !important}

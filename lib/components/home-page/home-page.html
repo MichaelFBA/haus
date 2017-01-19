@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="../../../scripts/stylesheets/home.css">
+<script src="../../../scripts/home.bundle.js" async></script>
+
 <template>
     <nav class="columns is-mobile bbt">
         <div class="column is-one-quarter-mobile">
@@ -8,15 +11,15 @@
             </a>
         </div>
 
-        <div class="column is-one-quarter-mobile text-right">
-            <span class="nav-toggle is-hidden-tablet">
+        <div class="column is-one-quarter-mobile text-right is-hidden-tablet">
+            <span class="nav-toggle">
                 <span></span>
                 <span></span>
                 <span></span>
             </span>
         </div>
 
-        <div class="column auto is-hidden-mobile">
+        <div class="column auto is-hidden-mobile  text-right">
             <a class="nav-item" is="pushstate-anchor" href="/manifesto">Manifesto</a>
             <a class="nav-item" is="pushstate-anchor" href="/pricing">Pricing</a>
             <span class="nav-item">
@@ -26,7 +29,7 @@
     </nav>
 
     <section id="hero-interactive" class="home-banner columns bbt">
-        <div class="column is-6 is-offset-1 vertical">
+        <div class="column is-6 is-offset-1 vertical front">
             <h1>We believe in an offline first, privacy focused solution for managing your private property.</h1>
             <a is="pushstate-anchor" class="button column is-3 text-center" href="/properties">Try now for free</a>
         </div>
@@ -79,5 +82,3 @@
         </div>
     </footer>
 </template>
-
-<script src="../../../scripts/home.bundle.js" async></script>

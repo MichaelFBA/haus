@@ -1,3 +1,909 @@
-webpackJsonp([2],{130:function(t,e,a){"use strict";a(40),a(38)},38:function(t,e,a){!function(t){var e="\n";if(t.head){var a=t.head,i=t.createElement("div");for(i.innerHTML=e;i.children.length>0;)a.appendChild(i.children[0])}else t.write(e)}(document),function(t){var e="";if(t.body){var a=t.body,i=t.createElement("div");for(i.innerHTML=e;i.children.length>0;)a.appendChild(i.children[0])}else t.write(e)}(document),a(44)},40:function(t,e,a){!function(t){var e="\n";if(t.head){var a=t.head,i=t.createElement("div");for(i.innerHTML=e;i.children.length>0;)a.appendChild(i.children[0])}else t.write(e)}(document),function(t){var e="";if(t.body){var a=t.body,i=t.createElement("div");for(i.innerHTML=e;i.children.length>0;)a.appendChild(i.children[0])}else t.write(e)}(document),a(45)},44:function(t,e,a){"use strict";
+webpackJsonp([2],{
+
+/***/ 122:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(38);
+
+__webpack_require__(36);
+
+/***/ }),
+
+/***/ 36:
+/***/ (function(module, exports, __webpack_require__) {
+
+/*__wc__loader*/
+
+
+    (function(document) {
+      var _htmlStr = "\n";
+      if (document.head) {
+        var el = document.head;
+        var div = document.createElement('div');
+        div.innerHTML = _htmlStr;
+        while (div.children.length > 0) {
+          el.appendChild(div.children[0]);
+        }
+      } else {
+        document.write(_htmlStr);
+      }
+    })(document);
+    
+
+
+    (function(document) {
+      var _htmlStr = "";
+      if (document.body) {
+        var el = document.body;
+        var div = document.createElement('div');
+        div.innerHTML = _htmlStr;
+        while (div.children.length > 0) {
+          el.appendChild(div.children[0]);
+        }
+      } else {
+        document.write(_htmlStr);
+      }
+    })(document);
+    
+
+__webpack_require__(42);
+
+
+/***/ }),
+
+/***/ 38:
+/***/ (function(module, exports, __webpack_require__) {
+
+/*__wc__loader*/
+
+
+    (function(document) {
+      var _htmlStr = "\n";
+      if (document.head) {
+        var el = document.head;
+        var div = document.createElement('div');
+        div.innerHTML = _htmlStr;
+        while (div.children.length > 0) {
+          el.appendChild(div.children[0]);
+        }
+      } else {
+        document.write(_htmlStr);
+      }
+    })(document);
+    
+
+
+    (function(document) {
+      var _htmlStr = "";
+      if (document.body) {
+        var el = document.body;
+        var div = document.createElement('div');
+        div.innerHTML = _htmlStr;
+        while (div.children.length > 0) {
+          el.appendChild(div.children[0]);
+        }
+      } else {
+        document.write(_htmlStr);
+      }
+    })(document);
+    
+
+__webpack_require__(43);
+
+
+/***/ }),
+
+/***/ 42:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
 // @license Copyright (C) 2015 Erik Ringsmuth - MIT license
-!function(t,e){function a(t,a,i){var r=e.createEvent("CustomEvent");return r.initCustomEvent(t,!1,!0,a),i.dispatchEvent(r)}function i(e){var i=g.parseUrl(t.location.href,e.getAttribute("mode"));if(i.hash!==E.hash&&i.path===E.path&&i.search===E.search&&i.isHashPath===E.isHashPath)return"disabled"!==e.getAttribute("scroll-to-hash")&&v(i.hash),void(E=i);E=i;var n={path:i.path,state:t.history.state};if(a("state-change",n,e)){for(var s=e.firstElementChild;s;){if("APP-ROUTE"===s.tagName&&g.testRoute(s.getAttribute("path"),i.path,e.getAttribute("trailingSlash"),s.hasAttribute("regex")))return void r(e,s,i);s=s.nextSibling}a("not-found",n,e)}}function r(e,i,r){if(i.hasAttribute("redirect"))return void e.go(i.getAttribute("redirect"),{replace:!0});if(i!==e.activeRoute||"noop"!==i.getAttribute("onUrlChange")){var o={path:r.path,route:i,oldRoute:e.activeRoute,state:t.history.state};a("activate-route-start",o,e)&&a("activate-route-start",o,i)&&(e.loadingRoute=i,i===e.activeRoute&&"updateModel"===i.getAttribute("onUrlChange")?n(e,i,r,o):i.hasAttribute("import")?s(e,i.getAttribute("import"),i,r,o):i.hasAttribute("element")?h(e,i.getAttribute("element"),i,r,o):i.firstElementChild&&"TEMPLATE"===i.firstElementChild.tagName&&(i.isInlineTemplate=!0,u(e,i.firstElementChild,i,r,o)))}}function n(t,e,i,r){var n=c(t,e,i,r);e.hasAttribute("template")||e.isInlineTemplate?l(e.lastElementChild.templateInstance.model,n):l(e.firstElementChild,n),a("activate-route-end",r,t),a("activate-route-end",r,r.route)}function s(t,i,r,n,s){function h(){c.loaded=!0,o(t,c,i,r,n,s)}function u(e){var n={errorEvent:e,importUri:i,routeDetail:s};a("import-error",n,t),a("import-error",n,r)}var c;m.hasOwnProperty(i)?(c=m[i],c.loaded?o(t,c,i,r,n,s):(c.addEventListener("load",h),c.addEventListener("error",u))):(c=e.createElement("link"),c.setAttribute("rel","import"),c.setAttribute("href",i),c.setAttribute("async","async"),c.addEventListener("load",h),c.addEventListener("error",u),c.loaded=!1,e.head.appendChild(c),m[i]=c)}function o(t,e,a,i,r,n){if(i.importLink=e,i===t.loadingRoute)if(i.hasAttribute("template")){var s,o=i.getAttribute("template");s=o?e.import.getElementById(o):e.import.querySelector("template"),u(t,s,i,r,n)}else h(t,i.getAttribute("element")||a.split("/").slice(-1)[0].replace(".html",""),i,r,n)}function h(t,a,i,r,n){var s=e.createElement(a),o=c(t,i,r,n);l(s,o),d(t,s,r,n)}function u(t,a,i,r,n){var s;if("createInstance"in a){var o=c(t,i,r,n);s=a.createInstance(o)}else s=e.importNode(a.content,!0);d(t,s,r,n)}function c(t,e,i,r){var n=g.routeArguments(e.getAttribute("path"),i.path,i.search,e.hasAttribute("regex"),"auto"===t.getAttribute("typecast"));return(e.hasAttribute("bindRouter")||t.hasAttribute("bindRouter"))&&(n.router=t),r.model=n,a("before-data-binding",r,t),a("before-data-binding",r,r.route),r.model}function l(t,e){for(var a in e)e.hasOwnProperty(a)&&(t[a]=e[a])}function d(t,e,i,r){p(t.previousRoute),t.previousRoute=t.activeRoute,t.activeRoute=t.loadingRoute,t.loadingRoute=null,t.previousRoute&&t.previousRoute.removeAttribute("active"),t.activeRoute.setAttribute("active","active"),t.hasAttribute("core-animated-pages")&&r.route!==r.oldRoute||p(t.previousRoute),t.activeRoute.appendChild(e),t.hasAttribute("core-animated-pages")&&(t.coreAnimatedPages.selected=t.activeRoute.getAttribute("path")),i.hash&&!t.hasAttribute("core-animated-pages")&&"disabled"!==t.getAttribute("scroll-to-hash")&&v(i.hash),a("activate-route-end",r,t),a("activate-route-end",r,r.route)}function p(t){if(t){var e=t.firstChild;for(t.isInlineTemplate&&(e=t.querySelector("template").nextSibling);e;){var a=e;e=e.nextSibling,t.removeChild(a)}}}function v(t){t&&setTimeout(function(){var a;try{a=e.querySelector("html /deep/ "+t)||e.querySelector('html /deep/ [name="'+t.substring(1)+'"]')}catch(i){a=e.querySelector(t)||e.querySelector('[name="'+t.substring(1)+'"]')}a&&a.scrollIntoView&&a.scrollIntoView(!0)},0)}function f(t,e,a,i,r){var n=t[e],s=a[i];if("**"===n&&e===t.length-1)return!0;if("undefined"==typeof n||"undefined"==typeof s)return n===s;if(n===s||"*"===n||":"===n.charAt(0))return":"===n.charAt(0)&&"undefined"!=typeof r&&(r[n.substring(1)]=a[i]),f(t,e+1,a,i+1,r);if("**"===n)for(var o=i;o<a.length;o++)if(f(t,e+1,a,o,r))return!0;return!1}var g={},m={},b="ActiveXObject"in t,A=!!t.navigator.userAgent.match(/Edge/),E={},y=Object.create(HTMLElement.prototype);y.util=g,e.registerElement("app-route",{prototype:Object.create(HTMLElement.prototype)}),y.attachedCallback=function(){"manual"!==this.getAttribute("init")&&this.init()},y.init=function(){var a=this;a.isInitialized||(a.isInitialized=!0,a.hasAttribute("trailingSlash")||a.setAttribute("trailingSlash","strict"),a.hasAttribute("mode")||a.setAttribute("mode","auto"),a.hasAttribute("typecast")||a.setAttribute("typecast","auto"),a.hasAttribute("scroll-to-hash")||a.setAttribute("scroll-to-hash","auto"),a.hasAttribute("core-animated-pages")&&(a.createShadowRoot(),a.coreAnimatedPages=e.createElement("core-animated-pages"),a.coreAnimatedPages.appendChild(e.createElement("content")),a.coreAnimatedPages.style.position="static",a.coreAnimatedPages.setAttribute("valueattr","path"),a.coreAnimatedPages.setAttribute("transitions",a.getAttribute("transitions")),a.shadowRoot.appendChild(a.coreAnimatedPages),a.coreAnimatedPages.addEventListener("core-animated-pages-transition-end",function(){a.previousRoute&&!a.previousRoute.hasAttribute("active")&&p(a.previousRoute)})),a.stateChangeHandler=i.bind(null,a),t.addEventListener("popstate",a.stateChangeHandler,!1),(b||A)&&t.addEventListener("hashchange",a.stateChangeHandler,!1),i(a))},y.detachedCallback=function(){t.removeEventListener("popstate",this.stateChangeHandler,!1),(b||A)&&t.removeEventListener("hashchange",this.stateChangeHandler,!1)},y.go=function(a,i){"pushstate"!==this.getAttribute("mode")&&(a="hashbang"===this.getAttribute("mode")?"#!"+a:"#"+a);var r=t.history.state;i&&i.replace===!0?t.history.replaceState(r,null,a):t.history.pushState(r,null,a);try{var n=new PopStateEvent("popstate",{bubbles:!1,cancelable:!1,state:r});"dispatchEvent_"in t?t.dispatchEvent_(n):t.dispatchEvent(n)}catch(a){var s=e.createEvent("CustomEvent");s.initCustomEvent("popstate",!1,!1,{state:r}),t.dispatchEvent(s)}},g.parseUrl=function(t,a){var i={isHashPath:"hash"===a};if("function"==typeof URL){var r=new URL(t);i.path=r.pathname,i.hash=r.hash,i.search=r.search}else{var n=e.createElement("a");n.href=t,i.path=n.pathname,"/"!==i.path.charAt(0)&&(i.path="/"+i.path),i.hash=n.hash,i.search=n.search}if("pushstate"!==a&&("#/"===i.hash.substring(0,2)?(i.isHashPath=!0,i.path=i.hash.substring(1)):"#!/"===i.hash.substring(0,3)?(i.isHashPath=!0,i.path=i.hash.substring(2)):i.isHashPath&&(0===i.hash.length?i.path="/":i.path=i.hash.substring(1)),i.isHashPath)){i.hash="";var s=i.path.indexOf("#");s!==-1&&(i.hash=i.path.substring(s),i.path=i.path.substring(0,s));var o=i.path.indexOf("?");o!==-1&&(i.search=i.path.substring(o),i.path=i.path.substring(0,o))}return i},g.testRoute=function(t,e,a,i){return"ignore"===a&&("/"===e.slice(-1)&&(e=e.slice(0,-1)),"/"!==t.slice(-1)||i||(t=t.slice(0,-1))),i?g.testRegExString(t,e):t===e||"*"===t||("/"!==t.charAt(0)&&(t="/**/"+t),f(t.split("/"),1,e.split("/"),1))},g.routeArguments=function(t,e,a,i,r){var n={};i||("/"!==t.charAt(0)&&(t="/**/"+t),f(t.split("/"),1,e.split("/"),1,n));var s=a.substring(1).split("&");1===s.length&&""===s[0]&&(s=[]);for(var o=0;o<s.length;o++){var h=s[o],u=h.split("=");n[u[0]]=u.splice(1,u.length-1).join("=")}if(r)for(var c in n)n[c]=g.typecast(n[c]);return n},g.typecast=function(t){return"true"===t||"false"!==t&&(isNaN(t)||""===t||"0"===t.charAt(0)?decodeURIComponent(t):+t)},g.testRegExString=function(t,e){if("/"!==t.charAt(0))return!1;t=t.slice(1);var a="";if("/"===t.slice(-1))t=t.slice(0,-1);else{if("/i"!==t.slice(-2))return!1;t=t.slice(0,-2),a="i"}return new RegExp(t,a).test(e)},e.registerElement("app-router",{prototype:y})}(window,document)},45:function(t,e,a){"use strict";!function(){function t(t){if(!t.ctrlKey&&!t.metaKey&&2!==t.which){var e=this.getAttribute("href");if(e&&(0!==e.indexOf("http")||window.location.host===new URL(e).host)){window.history.pushState(JSON.parse(this.getAttribute("state"))||window.history.state,this.getAttribute("title"),e);try{var a=new PopStateEvent("popstate",{bubbles:!1,cancelable:!1,state:window.history.state});"dispatchEvent_"in window?window.dispatchEvent_(a):window.dispatchEvent(a)}catch(t){var i=document.createEvent("CustomEvent");i.initCustomEvent("popstate",!1,!1,{state:window.history.state}),window.dispatchEvent(i)}t.preventDefault()}}}var e=Object.create(HTMLAnchorElement.prototype);e.attachedCallback=function(){this.addEventListener("click",t,!1)},e.detachedCallback=function(){this.removeEventListener("click",t,!1)},document.registerElement("pushstate-anchor",{prototype:e,extends:"a"})}()}},[130]);
+(function (window, document) {
+  var utilities = {};
+  var importedURIs = {};
+  var isIE = 'ActiveXObject' in window;
+  var isEdge = !!window.navigator.userAgent.match(/Edge/);
+  var previousUrl = {};
+
+  // <app-router
+  //   init="auto|manual"
+  //   mode="auto|hash|hashbang|pushstate"
+  //   trailingSlash="strict|ignore"
+  //   typecast="auto|string"
+  //   bindRouter
+  //   ></app-router>
+  var AppRouter = Object.create(HTMLElement.prototype);
+  AppRouter.util = utilities;
+
+  // <app-route
+  //   path="/path"
+  //   import="/page/cust-el.html"
+  //   element[="cust-el"]
+  //   template[="template-id"]
+  //   regex
+  //   redirect="/path"
+  //   onUrlChange="reload|updateModel|noop"
+  //   bindRouter
+  //   ></app-route>
+  document.registerElement('app-route', {
+    prototype: Object.create(HTMLElement.prototype)
+  });
+
+  // Initial set up when attached
+  AppRouter.attachedCallback = function () {
+    // init="auto|manual"
+    if (this.getAttribute('init') !== 'manual') {
+      this.init();
+    }
+  };
+
+  // Initialize the router
+  AppRouter.init = function () {
+    var router = this;
+    if (router.isInitialized) {
+      return;
+    }
+    router.isInitialized = true;
+
+    // trailingSlash="strict|ignore"
+    if (!router.hasAttribute('trailingSlash')) {
+      router.setAttribute('trailingSlash', 'strict');
+    }
+
+    // mode="auto|hash|hashbang|pushstate"
+    if (!router.hasAttribute('mode')) {
+      router.setAttribute('mode', 'auto');
+    }
+
+    // typecast="auto|string"
+    if (!router.hasAttribute('typecast')) {
+      router.setAttribute('typecast', 'auto');
+    }
+
+    // scroll-to-hash="auto|disabled"
+    if (!router.hasAttribute('scroll-to-hash')) {
+      router.setAttribute('scroll-to-hash', 'auto');
+    }
+
+    // <app-router core-animated-pages transitions="hero-transition cross-fade">
+    if (router.hasAttribute('core-animated-pages')) {
+      // use shadow DOM to wrap the <app-route> elements in a <core-animated-pages> element
+      // <app-router>
+      //   # shadowRoot
+      //   <core-animated-pages>
+      //     # content in the light DOM
+      //     <app-route element="home-page">
+      //       <home-page>
+      //       </home-page>
+      //     </app-route>
+      //   </core-animated-pages>
+      // </app-router>
+      router.createShadowRoot();
+      router.coreAnimatedPages = document.createElement('core-animated-pages');
+      router.coreAnimatedPages.appendChild(document.createElement('content'));
+
+      // don't know why it needs to be static, but absolute doesn't display the page
+      router.coreAnimatedPages.style.position = 'static';
+
+      // toggle the selected page using selected="path" instead of selected="integer"
+      router.coreAnimatedPages.setAttribute('valueattr', 'path');
+
+      // pass the transitions attribute from <app-router core-animated-pages transitions="hero-transition cross-fade">
+      // to <core-animated-pages transitions="hero-transition cross-fade">
+      router.coreAnimatedPages.setAttribute('transitions', router.getAttribute('transitions'));
+
+      // set the shadow DOM's content
+      router.shadowRoot.appendChild(router.coreAnimatedPages);
+
+      // when a transition finishes, remove the previous route's content. there is a temporary overlap where both
+      // the new and old route's content is in the DOM to animate the transition.
+      router.coreAnimatedPages.addEventListener('core-animated-pages-transition-end', function () {
+        // with core-animated-pages, navigating to the same route twice quickly will set the new route to both the
+        // activeRoute and the previousRoute before the animation finishes. we don't want to delete the route content
+        // if it's actually the active route.
+        if (router.previousRoute && !router.previousRoute.hasAttribute('active')) {
+          deactivateRoute(router.previousRoute);
+        }
+      });
+    }
+
+    // listen for URL change events
+    router.stateChangeHandler = stateChange.bind(null, router);
+    window.addEventListener('popstate', router.stateChangeHandler, false);
+    if (isIE || isEdge) {
+      // IE & Edge bug. A hashchange is supposed to trigger a popstate event, making popstate the only event you
+      // need to listen to. That's not the case in IE & Edge so we make another event listener for it.
+      window.addEventListener('hashchange', router.stateChangeHandler, false);
+    }
+
+    // load the web component for the current route
+    stateChange(router);
+  };
+
+  // clean up global event listeners
+  AppRouter.detachedCallback = function () {
+    window.removeEventListener('popstate', this.stateChangeHandler, false);
+    if (isIE || isEdge) {
+      window.removeEventListener('hashchange', this.stateChangeHandler, false);
+    }
+  };
+
+  // go(path, options) Navigate to the path
+  //
+  // options = {
+  //   replace: true
+  // }
+  AppRouter.go = function (path, options) {
+    if (this.getAttribute('mode') !== 'pushstate') {
+      // mode == auto, hash or hashbang
+      if (this.getAttribute('mode') === 'hashbang') {
+        path = '#!' + path;
+      } else {
+        path = '#' + path;
+      }
+    }
+    var currentState = window.history.state;
+    if (options && options.replace === true) {
+      window.history.replaceState(currentState, null, path);
+    } else {
+      window.history.pushState(currentState, null, path);
+    }
+
+    // dispatch a popstate event
+    try {
+      var popstateEvent = new PopStateEvent('popstate', {
+        bubbles: false,
+        cancelable: false,
+        state: currentState
+      });
+
+      if ('dispatchEvent_' in window) {
+        // FireFox with polyfill
+        window.dispatchEvent_(popstateEvent);
+      } else {
+        // normal
+        window.dispatchEvent(popstateEvent);
+      }
+    } catch (error) {
+      // Internet Exploder
+      var fallbackEvent = document.createEvent('CustomEvent');
+      fallbackEvent.initCustomEvent('popstate', false, false, { state: currentState });
+      window.dispatchEvent(fallbackEvent);
+    }
+  };
+
+  // fire(type, detail, node) - Fire a new CustomEvent(type, detail) on the node
+  //
+  // listen with document.querySelector('app-router').addEventListener(type, function(event) {
+  //   event.detail, event.preventDefault()
+  // })
+  function fire(type, detail, node) {
+    // create a CustomEvent the old way for IE9/10 support
+    var event = document.createEvent('CustomEvent');
+
+    // initCustomEvent(type, bubbles, cancelable, detail)
+    event.initCustomEvent(type, false, true, detail);
+
+    // returns false when event.preventDefault() is called, true otherwise
+    return node.dispatchEvent(event);
+  }
+
+  // Find the first <app-route> that matches the current URL and change the active route
+  function stateChange(router) {
+    var url = utilities.parseUrl(window.location.href, router.getAttribute('mode'));
+
+    // don't load a new route if only the hash fragment changed
+    if (url.hash !== previousUrl.hash && url.path === previousUrl.path && url.search === previousUrl.search && url.isHashPath === previousUrl.isHashPath) {
+      if (router.getAttribute('scroll-to-hash') !== 'disabled') {
+        scrollToHash(url.hash);
+      }
+      previousUrl = url;
+      return;
+    }
+    previousUrl = url;
+
+    // fire a state-change event on the app-router and return early if the user called event.preventDefault()
+    var eventDetail = {
+      path: url.path,
+      state: window.history.state
+    };
+    if (!fire('state-change', eventDetail, router)) {
+      return;
+    }
+
+    // find the first matching route
+    var route = router.firstElementChild;
+    while (route) {
+      if (route.tagName === 'APP-ROUTE' && utilities.testRoute(route.getAttribute('path'), url.path, router.getAttribute('trailingSlash'), route.hasAttribute('regex'))) {
+        activateRoute(router, route, url);
+        return;
+      }
+      route = route.nextSibling;
+    }
+
+    fire('not-found', eventDetail, router);
+  }
+
+  // Activate the route
+  function activateRoute(router, route, url) {
+    if (route.hasAttribute('redirect')) {
+      router.go(route.getAttribute('redirect'), { replace: true });
+      return;
+    }
+
+    // if we're on the same route and `onUrlChange="noop"` then don't reload the route or update the model
+    if (route === router.activeRoute && route.getAttribute('onUrlChange') === 'noop') {
+      return;
+    }
+
+    var eventDetail = {
+      path: url.path,
+      route: route,
+      oldRoute: router.activeRoute,
+      state: window.history.state
+    };
+    if (!fire('activate-route-start', eventDetail, router)) {
+      return;
+    }
+    if (!fire('activate-route-start', eventDetail, route)) {
+      return;
+    }
+
+    // keep track of the route currently being loaded
+    router.loadingRoute = route;
+
+    // if we're on the same route and `onUrlChange="updateModel"` then update the model but don't replace the page content
+    if (route === router.activeRoute && route.getAttribute('onUrlChange') === 'updateModel') {
+      updateModelAndActivate(router, route, url, eventDetail);
+    }
+    // import custom element or template
+    else if (route.hasAttribute('import')) {
+        importAndActivate(router, route.getAttribute('import'), route, url, eventDetail);
+      }
+      // pre-loaded custom element
+      else if (route.hasAttribute('element')) {
+          activateCustomElement(router, route.getAttribute('element'), route, url, eventDetail);
+        }
+        // inline template
+        else if (route.firstElementChild && route.firstElementChild.tagName === 'TEMPLATE') {
+            // mark the route as an inline template so we know how to clean it up when we remove the route's content
+            route.isInlineTemplate = true;
+            activateTemplate(router, route.firstElementChild, route, url, eventDetail);
+          }
+  }
+
+  // If we are only hiding and showing the route, update the model and activate the route
+  function updateModelAndActivate(router, route, url, eventDetail) {
+    var model = createModel(router, route, url, eventDetail);
+
+    if (route.hasAttribute('template') || route.isInlineTemplate) {
+      // update the template model
+      setObjectProperties(route.lastElementChild.templateInstance.model, model);
+    } else {
+      // update the custom element model
+      setObjectProperties(route.firstElementChild, model);
+    }
+
+    fire('activate-route-end', eventDetail, router);
+    fire('activate-route-end', eventDetail, eventDetail.route);
+  }
+
+  // Import and activate a custom element or template
+  function importAndActivate(router, importUri, route, url, eventDetail) {
+    var importLink;
+    function importLoadedCallback() {
+      importLink.loaded = true;
+      activateImport(router, importLink, importUri, route, url, eventDetail);
+    }
+    function importErrorCallback(event) {
+      var errorDetail = {
+        errorEvent: event,
+        importUri: importUri,
+        routeDetail: eventDetail
+      };
+      fire('import-error', errorDetail, router);
+      fire('import-error', errorDetail, route);
+    }
+
+    if (!importedURIs.hasOwnProperty(importUri)) {
+      // hasn't been imported yet
+      importLink = document.createElement('link');
+      importLink.setAttribute('rel', 'import');
+      importLink.setAttribute('href', importUri);
+      importLink.setAttribute('async', 'async');
+      importLink.addEventListener('load', importLoadedCallback);
+      importLink.addEventListener('error', importErrorCallback);
+      importLink.loaded = false;
+      document.head.appendChild(importLink);
+      importedURIs[importUri] = importLink;
+    } else {
+      // previously imported. this is an async operation and may not be complete yet.
+      importLink = importedURIs[importUri];
+      if (!importLink.loaded) {
+        importLink.addEventListener('load', importLoadedCallback);
+        importLink.addEventListener('error', importErrorCallback);
+      } else {
+        activateImport(router, importLink, importUri, route, url, eventDetail);
+      }
+    }
+  }
+
+  // Activate the imported custom element or template
+  function activateImport(router, importLink, importUri, route, url, eventDetail) {
+    // allow referencing the route's import link in the activate-route-end callback
+    route.importLink = importLink;
+
+    // make sure the user didn't navigate to a different route while it loaded
+    if (route === router.loadingRoute) {
+      if (route.hasAttribute('template')) {
+        // template
+        var templateId = route.getAttribute('template');
+        var template;
+        if (templateId) {
+          template = importLink.import.getElementById(templateId);
+        } else {
+          template = importLink.import.querySelector('template');
+        }
+        activateTemplate(router, template, route, url, eventDetail);
+      } else {
+        // custom element
+        activateCustomElement(router, route.getAttribute('element') || importUri.split('/').slice(-1)[0].replace('.html', ''), route, url, eventDetail);
+      }
+    }
+  }
+
+  // Data bind the custom element then activate it
+  function activateCustomElement(router, elementName, route, url, eventDetail) {
+    var customElement = document.createElement(elementName);
+    var model = createModel(router, route, url, eventDetail);
+    setObjectProperties(customElement, model);
+    activateElement(router, customElement, url, eventDetail);
+  }
+
+  // Create an instance of the template
+  function activateTemplate(router, template, route, url, eventDetail) {
+    var templateInstance;
+    if ('createInstance' in template) {
+      // template.createInstance(model) is a Polymer method that binds a model to a template and also fixes
+      // https://github.com/erikringsmuth/app-router/issues/19
+      var model = createModel(router, route, url, eventDetail);
+      templateInstance = template.createInstance(model);
+    } else {
+      templateInstance = document.importNode(template.content, true);
+    }
+    activateElement(router, templateInstance, url, eventDetail);
+  }
+
+  // Create the route's model
+  function createModel(router, route, url, eventDetail) {
+    var model = utilities.routeArguments(route.getAttribute('path'), url.path, url.search, route.hasAttribute('regex'), router.getAttribute('typecast') === 'auto');
+    if (route.hasAttribute('bindRouter') || router.hasAttribute('bindRouter')) {
+      model.router = router;
+    }
+    eventDetail.model = model;
+    fire('before-data-binding', eventDetail, router);
+    fire('before-data-binding', eventDetail, eventDetail.route);
+    return eventDetail.model;
+  }
+
+  // Copy properties from one object to another
+  function setObjectProperties(object, model) {
+    for (var property in model) {
+      if (model.hasOwnProperty(property)) {
+        object[property] = model[property];
+      }
+    }
+  }
+
+  // Replace the active route's content with the new element
+  function activateElement(router, element, url, eventDetail) {
+    // when using core-animated-pages, the router doesn't remove the previousRoute's content right away. if you
+    // navigate between 3 routes quickly (ex: /a -> /b -> /c) you might set previousRoute to '/b' before '/a' is
+    // removed from the DOM. this verifies old content is removed before switching the reference to previousRoute.
+    deactivateRoute(router.previousRoute);
+
+    // update references to the activeRoute, previousRoute, and loadingRoute
+    router.previousRoute = router.activeRoute;
+    router.activeRoute = router.loadingRoute;
+    router.loadingRoute = null;
+    if (router.previousRoute) {
+      router.previousRoute.removeAttribute('active');
+    }
+    router.activeRoute.setAttribute('active', 'active');
+
+    // remove the old route's content before loading the new route. core-animated-pages temporarily needs the old and
+    // new route in the DOM at the same time to animate the transition, otherwise we can remove the old route's content
+    // right away. there is one exception for core-animated-pages where the route we're navigating to matches the same
+    // route (ex: path="/article/:id" navigating from /article/0 to /article/1). in this case we have to simply replace
+    // the route's content instead of animating a transition.
+    if (!router.hasAttribute('core-animated-pages') || eventDetail.route === eventDetail.oldRoute) {
+      deactivateRoute(router.previousRoute);
+    }
+
+    // add the new content
+    router.activeRoute.appendChild(element);
+
+    // animate the transition if core-animated-pages are being used
+    if (router.hasAttribute('core-animated-pages')) {
+      router.coreAnimatedPages.selected = router.activeRoute.getAttribute('path');
+      // the 'core-animated-pages-transition-end' event handler in init() will call deactivateRoute() on the previousRoute
+    }
+
+    // scroll to the URL hash if it's present
+    if (url.hash && !router.hasAttribute('core-animated-pages') && router.getAttribute('scroll-to-hash') !== 'disabled') {
+      scrollToHash(url.hash);
+    }
+
+    fire('activate-route-end', eventDetail, router);
+    fire('activate-route-end', eventDetail, eventDetail.route);
+  }
+
+  // Remove the route's content
+  function deactivateRoute(route) {
+    if (route) {
+      // remove the route content
+      var node = route.firstChild;
+
+      // don't remove an inline <template>
+      if (route.isInlineTemplate) {
+        node = route.querySelector('template').nextSibling;
+      }
+
+      while (node) {
+        var nodeToRemove = node;
+        node = node.nextSibling;
+        route.removeChild(nodeToRemove);
+      }
+    }
+  }
+
+  // scroll to the element with id="hash" or name="hash"
+  function scrollToHash(hash) {
+    if (!hash) return;
+
+    // wait for the browser's scrolling to finish before we scroll to the hash
+    // ex: http://example.com/#/page1#middle
+    // the browser will scroll to an element with id or name `/page1#middle` when the page finishes loading. if it doesn't exist
+    // it will scroll to the top of the page. let the browser finish the current event loop and scroll to the top of the page
+    // before we scroll to the element with id or name `middle`.
+    setTimeout(function () {
+      var hashElement;
+      try {
+        hashElement = document.querySelector('html /deep/ ' + hash) || document.querySelector('html /deep/ [name="' + hash.substring(1) + '"]');
+      } catch (e) {
+        // DOM exception 12 (unknown selector) is thrown in Firefox, Safari etc. when using Polymer 1.x Shady DOM mode
+        hashElement = document.querySelector(hash) || document.querySelector('[name="' + hash.substring(1) + '"]');
+      }
+      if (hashElement && hashElement.scrollIntoView) {
+        hashElement.scrollIntoView(true);
+      }
+    }, 0);
+  }
+
+  // parseUrl(location, mode) - Augment the native URL() constructor to get info about hash paths
+  //
+  // Example parseUrl('http://domain.com/other/path?queryParam3=false#/example/path?queryParam1=true&queryParam2=example%20string#middle', 'auto')
+  //
+  // returns {
+  //   path: '/example/path',
+  //   hash: '#middle'
+  //   search: '?queryParam1=true&queryParam2=example%20string',
+  //   isHashPath: true
+  // }
+  //
+  // Note: The location must be a fully qualified URL with a protocol like 'http(s)://'
+  utilities.parseUrl = function (location, mode) {
+    var url = {
+      isHashPath: mode === 'hash'
+    };
+
+    if (typeof URL === 'function') {
+      // browsers that support `new URL()`
+      var nativeUrl = new URL(location);
+      url.path = nativeUrl.pathname;
+      url.hash = nativeUrl.hash;
+      url.search = nativeUrl.search;
+    } else {
+      // IE
+      var anchor = document.createElement('a');
+      anchor.href = location;
+      url.path = anchor.pathname;
+      if (url.path.charAt(0) !== '/') {
+        url.path = '/' + url.path;
+      }
+      url.hash = anchor.hash;
+      url.search = anchor.search;
+    }
+
+    if (mode !== 'pushstate') {
+      // auto or hash
+
+      // check for a hash path
+      if (url.hash.substring(0, 2) === '#/') {
+        // hash path
+        url.isHashPath = true;
+        url.path = url.hash.substring(1);
+      } else if (url.hash.substring(0, 3) === '#!/') {
+        // hashbang path
+        url.isHashPath = true;
+        url.path = url.hash.substring(2);
+      } else if (url.isHashPath) {
+        // still use the hash if mode="hash"
+        if (url.hash.length === 0) {
+          url.path = '/';
+        } else {
+          url.path = url.hash.substring(1);
+        }
+      }
+
+      if (url.isHashPath) {
+        url.hash = '';
+
+        // hash paths might have an additional hash in the hash path for scrolling to a specific part of the page #/hash/path#elementId
+        var secondHashIndex = url.path.indexOf('#');
+        if (secondHashIndex !== -1) {
+          url.hash = url.path.substring(secondHashIndex);
+          url.path = url.path.substring(0, secondHashIndex);
+        }
+
+        // hash paths get the search from the hash if it exists
+        var searchIndex = url.path.indexOf('?');
+        if (searchIndex !== -1) {
+          url.search = url.path.substring(searchIndex);
+          url.path = url.path.substring(0, searchIndex);
+        }
+      }
+    }
+
+    return url;
+  };
+
+  // testRoute(routePath, urlPath, trailingSlashOption, isRegExp) - Test if the route's path matches the URL's path
+  //
+  // Example routePath: '/user/:userId/**'
+  // Example urlPath = '/user/123/bio'
+  utilities.testRoute = function (routePath, urlPath, trailingSlashOption, isRegExp) {
+    // try to fail or succeed as quickly as possible for the most common cases
+
+    // handle trailing slashes (options: strict (default), ignore)
+    if (trailingSlashOption === 'ignore') {
+      // remove trailing / from the route path and URL path
+      if (urlPath.slice(-1) === '/') {
+        urlPath = urlPath.slice(0, -1);
+      }
+      if (routePath.slice(-1) === '/' && !isRegExp) {
+        routePath = routePath.slice(0, -1);
+      }
+    }
+
+    // test regular expressions
+    if (isRegExp) {
+      return utilities.testRegExString(routePath, urlPath);
+    }
+
+    // if the urlPath is an exact match or '*' then the route is a match
+    if (routePath === urlPath || routePath === '*') {
+      return true;
+    }
+
+    // relative routes a/b/c are the same as routes that start with a globstar /**/a/b/c
+    if (routePath.charAt(0) !== '/') {
+      routePath = '/**/' + routePath;
+    }
+
+    // recursively test if the segments match (start at 1 because 0 is always an empty string)
+    return segmentsMatch(routePath.split('/'), 1, urlPath.split('/'), 1);
+  };
+
+  // segmentsMatch(routeSegments, routeIndex, urlSegments, urlIndex, pathVariables)
+  // recursively test the route segments against the url segments in place (without creating copies of the arrays
+  // for each recursive call)
+  //
+  // example routeSegments ['', 'user', ':userId', '**']
+  // example urlSegments ['', 'user', '123', 'bio']
+  function segmentsMatch(routeSegments, routeIndex, urlSegments, urlIndex, pathVariables) {
+    var routeSegment = routeSegments[routeIndex];
+    var urlSegment = urlSegments[urlIndex];
+
+    // if we're at the last route segment and it is a globstar, it will match the rest of the url
+    if (routeSegment === '**' && routeIndex === routeSegments.length - 1) {
+      return true;
+    }
+
+    // we hit the end of the route segments or the url segments
+    if (typeof routeSegment === 'undefined' || typeof urlSegment === 'undefined') {
+      // return true if we hit the end of both at the same time meaning everything else matched, else return false
+      return routeSegment === urlSegment;
+    }
+
+    // if the current segments match, recursively test the remaining segments
+    if (routeSegment === urlSegment || routeSegment === '*' || routeSegment.charAt(0) === ':') {
+      // store the path variable if we have a pathVariables object
+      if (routeSegment.charAt(0) === ':' && typeof pathVariables !== 'undefined') {
+        pathVariables[routeSegment.substring(1)] = urlSegments[urlIndex];
+      }
+      return segmentsMatch(routeSegments, routeIndex + 1, urlSegments, urlIndex + 1, pathVariables);
+    }
+
+    // globstars can match zero to many URL segments
+    if (routeSegment === '**') {
+      // test if the remaining route segments match any combination of the remaining url segments
+      for (var i = urlIndex; i < urlSegments.length; i++) {
+        if (segmentsMatch(routeSegments, routeIndex + 1, urlSegments, i, pathVariables)) {
+          return true;
+        }
+      }
+    }
+
+    // all tests failed, the route segments do not match the url segments
+    return false;
+  }
+
+  // routeArguments(routePath, urlPath, search, isRegExp) - Gets the path variables and query parameter values from the URL
+  utilities.routeArguments = function (routePath, urlPath, search, isRegExp, typecast) {
+    var args = {};
+
+    // regular expressions can't have path variables
+    if (!isRegExp) {
+      // relative routes a/b/c are the same as routes that start with a globstar /**/a/b/c
+      if (routePath.charAt(0) !== '/') {
+        routePath = '/**/' + routePath;
+      }
+
+      // get path variables
+      // urlPath '/customer/123'
+      // routePath '/customer/:id'
+      // parses id = '123'
+      segmentsMatch(routePath.split('/'), 1, urlPath.split('/'), 1, args);
+    }
+
+    var queryParameters = search.substring(1).split('&');
+    // split() on an empty string has a strange behavior of returning [''] instead of []
+    if (queryParameters.length === 1 && queryParameters[0] === '') {
+      queryParameters = [];
+    }
+    for (var i = 0; i < queryParameters.length; i++) {
+      var queryParameter = queryParameters[i];
+      var queryParameterParts = queryParameter.split('=');
+      args[queryParameterParts[0]] = queryParameterParts.splice(1, queryParameterParts.length - 1).join('=');
+    }
+
+    if (typecast) {
+      // parse the arguments into unescaped strings, numbers, or booleans
+      for (var arg in args) {
+        args[arg] = utilities.typecast(args[arg]);
+      }
+    }
+
+    return args;
+  };
+
+  // typecast(value) - Typecast the string value to an unescaped string, number, or boolean
+  utilities.typecast = function (value) {
+    // bool
+    if (value === 'true') {
+      return true;
+    }
+    if (value === 'false') {
+      return false;
+    }
+
+    // number
+    if (!isNaN(value) && value !== '' && value.charAt(0) !== '0') {
+      return +value;
+    }
+
+    // string
+    return decodeURIComponent(value);
+  };
+
+  // testRegExString(pattern, value) - Parse HTML attribute path="/^\/\w+\/\d+$/i" to a regular
+  // expression `new RegExp('^\/\w+\/\d+$', 'i')` and test against it.
+  //
+  // note that 'i' is the only valid option. global 'g', multiline 'm', and sticky 'y' won't be valid matchers for a path.
+  utilities.testRegExString = function (pattern, value) {
+    if (pattern.charAt(0) !== '/') {
+      // must start with a slash
+      return false;
+    }
+    pattern = pattern.slice(1);
+    var options = '';
+    if (pattern.slice(-1) === '/') {
+      pattern = pattern.slice(0, -1);
+    } else if (pattern.slice(-2) === '/i') {
+      pattern = pattern.slice(0, -2);
+      options = 'i';
+    } else {
+      // must end with a slash followed by zero or more options
+      return false;
+    }
+    return new RegExp(pattern, options).test(value);
+  };
+
+  document.registerElement('app-router', {
+    prototype: AppRouter
+  });
+})(window, document);
+
+/***/ }),
+
+/***/ 43:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+(function () {
+  // Extend the <a> tag with history.pushState()
+  //
+  // <a is="pushstate-anchor" href="/path" [title="New Page Title"] [state="{'message':'New State!'}"]>title</a>
+
+  var HTMLPushStateAnchorElement = Object.create(HTMLAnchorElement.prototype);
+
+  function pushStateAnchorEventListener(event) {
+    // open in new tab
+    if (event.ctrlKey || event.metaKey || event.which === 2) {
+      return;
+    }
+
+    var href = this.getAttribute('href');
+    if (!href) {
+      return;
+    }
+
+    // don't pushState if the URL is for a different host
+    if (href.indexOf('http') === 0 && window.location.host !== new URL(href).host) {
+      return;
+    }
+
+    // push state into the history stack
+    window.history.pushState(JSON.parse(this.getAttribute('state')) || window.history.state, this.getAttribute('title'), href);
+
+    // dispatch a popstate event
+    try {
+      var popstateEvent = new PopStateEvent('popstate', {
+        bubbles: false,
+        cancelable: false,
+        state: window.history.state
+      });
+
+      if ('dispatchEvent_' in window) {
+        // FireFox with polyfill
+        window.dispatchEvent_(popstateEvent);
+      } else {
+        // normal
+        window.dispatchEvent(popstateEvent);
+      }
+    } catch (error) {
+      // Internet Explorer
+      var evt = document.createEvent('CustomEvent');
+      evt.initCustomEvent('popstate', false, false, { state: window.history.state });
+      window.dispatchEvent(evt);
+    }
+
+    // prevent the default link click
+    event.preventDefault();
+  }
+
+  HTMLPushStateAnchorElement.attachedCallback = function () {
+    this.addEventListener('click', pushStateAnchorEventListener, false);
+  };
+
+  HTMLPushStateAnchorElement.detachedCallback = function () {
+    this.removeEventListener('click', pushStateAnchorEventListener, false);
+  };
+
+  document.registerElement('pushstate-anchor', {
+    prototype: HTMLPushStateAnchorElement,
+    extends: 'a'
+  });
+})();
+
+/***/ })
+
+},[122]);
