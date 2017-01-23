@@ -25,19 +25,39 @@
         </div>
     </nav>
 
-    <section class="columns bbt">
-        <div class="column is-11 is-offset-1 vertical">
-            <h3>Let’s begin</h3>
-            <p>Once you have added a property it will appear here. Simple click the + below to add your first property.</p>
-        </div>
-    </section>
+    <repeat-template id="repeat-properties">
+        <template>
+            <section class="container-fluid bbt">
+                <div class="row align-items-center">
+                    <div class="col"><img src="/images/icons/house.svg" alt="House"/></div>
+                    <div class="col">
+                        <p id="address">Apartment</p>
+                    </div>
+                    <div class="col text-right"><img src="/images/icons/right-arrow.svg" alt="Right"/></div>
+                </div>
+            </section>
+            <section class="container-fluid bbt text-center">
+                <div class="row no-gutters">
+                    <div class="column brt"><img src="/images/icons/chart.svg" alt="Chart"/></div>
+                    <div class="column"><img src="/images/icons/details.svg" alt="Details"/></div>
+                </div>
+            </section>
+        </template>
+        <!-- Show content incase no items -->
+        <section class="columns bbt">
+            <div class="column is-11 is-offset-1 vertical">
+                <h3>Let’s begin</h3>
+                <p>Once you have added a property it will appear here. Simple click the + below to add your first property.</p>
+            </div>
+        </section>
 
-    <section class="columns bbt">
-        <div class="column is-11 is-offset-1 vertical">
-            <h4 class="color-1">For your peace of mind</h4>
-            <p class="color-1">We will never transfer any of your private data over the internet, all the information you provide is stored locally on your phone.</p>
-        </div>
-    </section>
+        <section class="columns bbt">
+            <div class="column is-11 is-offset-1 vertical">
+                <h4 class="color-1">For your peace of mind</h4>
+                <p class="color-1">We will never transfer any of your private data over the internet, all the information you provide is stored locally on your phone.</p>
+            </div>
+        </section>
+    </repeat-template>
 
     <section class="columns">
         <div class="column is-12">

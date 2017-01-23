@@ -1,84 +1,78 @@
 <link rel="stylesheet" href="../../../scripts/stylesheets/home.css">
-<script src="../../../scripts/home.bundle.js" async></script>
 
 <template>
-    <nav class="columns is-mobile bbt">
-        <div class="column is-one-quarter-mobile">
-        </div>
-        <div class="column is-one-half-mobile text-center">
-            <a class="nav-item" is="pushstate-anchor" href="/">
-                <img src="/images/haus-logo.svg" alt="Haus" />
-            </a>
-        </div>
-
-        <div class="column is-one-quarter-mobile text-right is-hidden-tablet">
-            <span class="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </span>
-        </div>
-
-        <div class="column auto is-hidden-mobile  text-right">
+    <main-navigation class="bbt">
+        <a slot="center" is="pushstate-anchor" href="/">
+            <img src="/images/haus-logo.svg" alt="Haus" />
+        </a>
+        <div slot="right">
             <a class="nav-item" is="pushstate-anchor" href="/manifesto">Manifesto</a>
             <a class="nav-item" is="pushstate-anchor" href="/pricing">Pricing</a>
-            <span class="nav-item">
-                <a  class="button" is="pushstate-anchor" href="/properties">Begin</a>
-            </span>
+            <a class="button" is="pushstate-anchor" href="/properties">Begin</a>
         </div>
-    </nav>
+    </main-navigation>
 
-    <section id="hero-interactive" class="home-banner columns bbt">
-        <div class="column is-6 is-offset-1 vertical front">
-            <h1>We believe in an offline first, privacy focused solution for managing your private property.</h1>
-            <a is="pushstate-anchor" class="button column is-3 text-center" href="/properties">Try now for free</a>
+    <section class="container-fluid bbt">
+        <div id="hero-interactive" class="home-banner row">
+            <div class="col-sm-6 offset-sm-1 align-self-center front">
+                <h1>We believe in an offline first, privacy focused solution for managing your private property.</h1>
+                <a is="pushstate-anchor" class="button column is-3 text-center" href="/properties">Try now for free</a>
+            </div>
         </div>
     </section>
 
-    <section class="home-reasons columns bbt">
-        <div class="column is-3 is-offset-1 vertical">
-            <h4 class="color-1 pt1">What is Offline first?</h4>
-            <p>We live in a disconnected and battery powered world, but our technology and best practices are a leftover from the always connected and steadily powered past.</p>
-            <p>We make sure your app is always available even if your on the subway or travelling abroad without internet access.</p>
-            <a is="pushstate-anchor" class="color-1" href="/properties">Read more about it here</a>
-        </div>
-        <div class="column is-5 is-offset-1 vertical">
-            <h4 class="color-1 pt1">We are Privacy Focused</h4>
-            <blockquote class="color-1">If you are not paying for it, you're not the customer, you're the product being sold</blockquote>
-            <p>We often sacrifice some part of our privacy (think e-mail, digital photography, private messaging) to companies that provide a service. But behind the scenes your valuable data can be sold for advertisement purposes or even used for surveillance
-                via Governments.</p>
-            <p>We think there is a better, safer and secure way to start making privacy a central focus for applications moving forward. It starts with you and your phone.</p>
-        </div>
-    </section>
-
-    <section class="home-app columns bbt">
-        <div class="column is-5 text-center pan brt">
-            <img class="pt2" src="/images/app-preview.png" alt="Haus App" />
-        </div>
-        <div class="column is-4 is-offset-1 vertical">
-            <h4 class="color-1 pt1">Safe, secure, local</h4>
-            <p>You don’t need to download an app / sign up or transfer any information over the internet. Be safe. </p>
-            <p>Simply visit this site with your mobile phone, you will be prompted to add it to your homescreen. That’s it.</p>
-            <p>All of your data will be stored locally on your phone so only you have access. You can even access it when you are offline. If you want to access your data across multiple devices or save encrypted backups.</p>
+    <section class="container-fluid bbt">
+        <div class="home-reasons row no-gutters align-items-center">
+            <div class="col-sm-4 offset-sm-1">
+                <h4 class="color-1 pt1">What is Offline first?</h4>
+                <p>We live in a disconnected and battery powered world, but our technology and best practices are a leftover from the always connected and steadily powered past.</p>
+                <p>We make sure your app is always available even if your on the subway or travelling abroad without internet access.</p>
+                <a is="pushstate-anchor" class="color-1" href="/properties">Read more about it here</a>
+            </div>
+            <div class="col-sm-5 offset-sm-1">
+                <h4 class="color-1 pt1">We are Privacy Focused</h4>
+                <blockquote class="color-1">If you are not paying for it, you're not the customer, you're the product being sold</blockquote>
+                <p>We often sacrifice some part of our privacy (think e-mail, digital photography, private messaging) to companies that provide a service. But behind the scenes your valuable data can be sold for advertisement purposes or even used for surveillance
+                    via Governments.</p>
+                <p>We think there is a better, safer and secure way to start making privacy a central focus for applications moving forward. It starts with you and your phone.</p>
+            </div>
         </div>
     </section>
 
-    <footer class="columns">
-        <div class="column is-2 is-offset-1 ">
-            <h4 class="color-1 pt1">Pages</h4>
-            <ul>
-                <li><a is="pushstate-anchor" href="/manifesto">Manifesto</a></li>
-                <li><a is="pushstate-anchor" href="/pricing">Pricing</a></li>
-                <li><a is="pushstate-anchor" href="/properties">Contact</a></li>
-                <li><a is="pushstate-anchor" href="/properties">Privacy</a></li>
-            </ul>
+    <section class="home-app container-fluid bbt">
+        <div class="row">
+            <div class="col-sm-5 align-self-end text-center brt">
+                <img class="pt2" src="/images/app-preview.png" alt="Haus App" />
+            </div>
+            <div class="col-sm-4 offset-sm-1 align-self-center">
+                <h4 class="color-1 pt1">Safe, secure, local</h4>
+                <p>You don’t need to download an app / sign up or transfer any information over the internet. Be safe. </p>
+                <p>Simply visit this site with your mobile phone, you will be prompted to add it to your homescreen. That’s it.</p>
+                <p>All of your data will be stored locally on your phone so only you have access. You can even access it when you are offline. If you want to access your data across multiple devices or save encrypted backups.</p>
+            </div>
         </div>
-        <div class="column is-2">
-            <h4 class="color-1 pt1">Made with love in Berlin</h4>
-            <p>Copyright 2017</p>
-        </div>
-        <div class="column is-2 is-offset-4">
-            <img src="/images/relax.png" alt="Relax" />
+    </section>
+
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2 offset-sm-1">
+                <h4 class="color-1 pt1">Pages</h4>
+                <ul>
+                    <li><a is="pushstate-anchor" href="/manifesto">Manifesto</a></li>
+                    <li><a is="pushstate-anchor" href="/pricing">Pricing</a></li>
+                    <li><a is="pushstate-anchor" href="/properties">Contact</a></li>
+                    <li><a is="pushstate-anchor" href="/properties">Privacy</a></li>
+                </ul>
+            </div>
+            <div class="com-sm-2">
+                <h4 class="color-1 pt1">Made with love in Berlin</h4>
+                <p>Copyright 2017</p>
+            </div>
+            <div class="com-sm-2 offset-sm-4">
+                <img src="/images/relax.png" alt="Relax" />
+            </div>
         </div>
     </footer>
 </template>
+
+<script src="../../../scripts/home.bundle.js" async></script>

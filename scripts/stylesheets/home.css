@@ -1,14 +1,15 @@
-.button {
-  background-color: #ff5252;
-  border: 0px;
-  color: #ffffff !important; }
-  .button.round {
-    border-radius: 50%;
-    padding: 20px; }
-  .button.rectangle {
-    padding: 10px 30px; }
-  .button.fixed-bottom-middle {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%); }
+circle {
+  fill: #FF5252;
+  opacity: 1; }
+  circle:first-child {
+    fill: #A13030; }
+
+.home-reasons, .home-banner {
+  min-height: 500px; }
+
+footer ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px; }
+  footer ul li {
+    margin-bottom: 1em; }
